@@ -8,3 +8,6 @@ linear_predictor.deserializer = sagemaker.deserializers.CSVDeserializer()
 # predict with the test dataset
 predictions = linear_predictor.predict(X_test.values)
 print(predictions)
+
+# NEED TO STOP AFTER. IT WILL CHARGE YOU ALOT OF MONEY.
+sagemaker.Session().delete_endpoint(linear_predictor.endpoint)
